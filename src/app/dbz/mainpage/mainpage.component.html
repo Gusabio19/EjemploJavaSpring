@@ -2,17 +2,15 @@
 <hr>
 <div class="row">
     <div class="col">
-        <h3>Personajes</h3>
-        <hr>
-        <li>Krillin - 700</li>
-        <li>Goku - 15.000</li>
-        <li>Vegeta - 8,500</li>
+        <app-personajes [personajes]="personajes">
+        </app-personajes>
+        <!--  -->
     </div>
     <div class="col">
-        <h3>Agregar</h3>
-        <hr>
-        <input type="text" placeholder="Nombre" />
-        <input type="text" placeholder="Poder" />
-        <button>Agregar</button>
+        <app-agregar 
+        [nuevo]="nuevo"
+        (onNuevoPersona)="agregarNuevoPersonaje($event)"
+        ></app-agregar>
+
     </div>
 </div>
